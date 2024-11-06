@@ -1,7 +1,9 @@
 /*
- * 문제 : 백준 0000번 - 0000 (https://www.acmicpc.net/problem/0000)
+ * 문제: 백준 0000번 - 0000 (https://www.acmicpc.net/problem/0000)
  * 문제 풀이
  *
+ *
+ * 시간 복잡도:
  */
 
 package Baekjoon;
