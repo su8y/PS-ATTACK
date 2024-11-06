@@ -6,14 +6,13 @@
 </div>
 
 ## 느려도 괜찮으니 꾸준히 
-* ⏱️ 매주 **목요일 8시** 리뷰  
+* ~⏱️ 매주 **목요일 8시** 리뷰~
 * 리뷰는 **Pull Request** 코멘트로 진행합니다.
 * **동료가 푼 문제**를 태그하여 질문을 해주세요.
 
 ## 참여 방법
-* 🙇‍♂️ 리포지토리 `fork`후 폴더를 추가해주시면 됩니다. 폴더명은 `ex) nickname`으로 만들어주세요
-* 🚫 다른 팀원들의 폴더 내용을 `수정 후 커밋` 하시면 안됩니다.
-* ~좋은 문제가 있다면 리뷰어를 등록해서 괴롭혀 주시길 바랍니다~
+* `Open된 Issue` 들어가서 문제들을 같이 풀기
+* 좋은 문제들이 있다면 `Issue` 등록하시면 됩니다.`Contributer`만 가능, 문의 **bsa0530@gmail.com**
   
 ### 소스
 풀었던 문제 소스내용에 `문제 링크`와 `접근 방법` 및 `시간 복잡도` 등 문제 이해에 대한 정보를 작성해주세요.
@@ -23,15 +22,10 @@
   
 ### Pull Requests
 * **TITLE** : " NICKNAME/ N 문제(몇 문제인지 명시)"
-* **CONTENT** : "`접근 방법`, `공부한 내용`" 정리
+* **CONTENT** : "`접근 방법`, `공부한 내용`" 정리 혹은 관련 `Issue ID` 태그 
 * 리뷰어를 등록하여 리뷰를 요청할 수 있습니다.
 
 
-## 언젠간 `골드`가 되겠지 ( 우리들의 근황 ) 
+## Contributors
 * su8y: [![Solved.ac Profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=suby00)](https://solved.ac/suby00/)
 * tecte1023: [![Solved.ac Profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=tecte1023)](https://solved.ac/tecte1023/)
-* sibjagun: [![Solved.ac Profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=sibjagun)](https://solved.ac/sibjagun/)
-* gksktl111: [![Solved.ac Profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=gksktl111)](https://solved.ac/gksktl111/)
-* ionmax5602: [![Solved.ac Profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=ionmax5602)](https://solved.ac/ionmax5602/)
-* tony2yoo: [![Solved.ac Profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=tony2yoo)](https://solved.ac/tony2yoo/)
-* cji456: [![Solved.ac Profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=cji456)](https://solved.ac/cji456/)
