@@ -1,7 +1,9 @@
 /*
- * 문제 : 백준 11723번 - 집합 (https://www.acmicpc.net/problem/11723)
+ * 문제: 백준 11723번 - 집합 (https://www.acmicpc.net/problem/11723)
  * 문제 풀이
  *  hashSet으로 푼 방법
+ *
+ * 시간 복잡도: O(M)
  */
 
 package Baekjoon;
