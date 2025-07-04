@@ -1,5 +1,7 @@
 /*
- * 문제 : 백준 14500번 - 테트로미노 (https://www.acmicpc.net/problem/14500)
+ * 문제: 백준 14500번 - 테트로미노 (https://www.acmicpc.net/problem/14500)
+ *
+ * 시간 복잡도: O(n * m)
  */
 
 package Baekjoon;

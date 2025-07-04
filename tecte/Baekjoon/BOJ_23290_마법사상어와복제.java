@@ -1,5 +1,7 @@
 /*
  * 문제 : 백준 23290번 - 마법사 상어와 복제 (https://www.acmicpc.net/problem/23290)
+ *
+ * 시간 복잡도: O(s)
  */
 
 package Baekjoon;
@@ -11,6 +13,74 @@ import java.util.StringTokenizer;
 public class BOJ_23290_마법사상어와복제 {
     // public class Main {
     static Cell[][] sea = new Cell[5][5];
+
+    public static Cell[] sharkMove(int x, int y, int m) {
+        Cell[] move = new Cell[3];
+
+        if (m >= 0 && m < 3) {
+            int[][] dir = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
+            int sum = -1;
+
+            for (int[] d : dir) {
+                int nx = x + d[0];
+                int ny = y + d[1];
+
+                if (nx > 0 && nx < 5 && ny > 0 && ny < 5) {
+                    Cell[] newMove;
+                    int temp = sea[nx][ny].cnt;
+                    int newSum = temp;
+
+                    sea[nx][ny].cnt = 0;
+                    newMove = sharkMove(nx, ny, m + 1);
+                    newMove[m] = sea[nx][ny];
+
+                    for (int j = m + 1; j < newMove.length; j++)
+                        newSum += sea[newMove[j].x][newMove[j].y].cnt;
+
+                    if (sum < newSum) {
+                        sum = newSum;
+                        move = newMove;
+                    }
+
+                    sea[nx][ny].cnt = temp;
+                }
+            }
+        }
+
+        return move;
+    }
+
+    public static class Cell {
+        int x, y;
+        boolean shark = false;
+        int smell = 0;
+        int cnt = 0;
+        int[] dir = new int[9];
+
+        public Cell(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        public Cell(int x, int y, boolean shark, int smell, int cnt, int[] dir) {
+            this.x = x;
+            this.y = y;
+            this.shark = shark;
+            this.smell = smell;
+            this.cnt = cnt;
+            this.dir = dir;
+        }
+
+        public void remove(int s) {
+            this.smell = s;
+            this.cnt = 0;
+            this.dir = new int[9];
+        }
+
+        public Cell copy() {
+            return new Cell(x, y, shark, smell, cnt, dir.clone());
+        }
+    }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -101,73 +171,5 @@ public class BOJ_23290_마법사상어와복제 {
         bw.write(cnt + "");
         br.close();
         bw.close();
-    }
-
-    public static Cell[] sharkMove(int x, int y, int m) {
-        Cell[] move = new Cell[3];
-
-        if (m >= 0 && m < 3) {
-            int[][] dir = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
-            int sum = -1;
-
-            for (int[] d : dir) {
-                int nx = x + d[0];
-                int ny = y + d[1];
-
-                if (nx > 0 && nx < 5 && ny > 0 && ny < 5) {
-                    Cell[] newMove;
-                    int temp = sea[nx][ny].cnt;
-                    int newSum = temp;
-
-                    sea[nx][ny].cnt = 0;
-                    newMove = sharkMove(nx, ny, m + 1);
-                    newMove[m] = sea[nx][ny];
-
-                    for (int j = m + 1; j < newMove.length; j++)
-                        newSum += sea[newMove[j].x][newMove[j].y].cnt;
-
-                    if (sum < newSum) {
-                        sum = newSum;
-                        move = newMove;
-                    }
-
-                    sea[nx][ny].cnt = temp;
-                }
-            }
-        }
-
-        return move;
-    }
-
-    public static class Cell {
-        int x, y;
-        boolean shark = false;
-        int smell = 0;
-        int cnt = 0;
-        int[] dir = new int[9];
-
-        public Cell(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        public Cell(int x, int y, boolean shark, int smell, int cnt, int[] dir) {
-            this.x = x;
-            this.y = y;
-            this.shark = shark;
-            this.smell = smell;
-            this.cnt = cnt;
-            this.dir = dir;
-        }
-
-        public void remove(int s) {
-            this.smell = s;
-            this.cnt = 0;
-            this.dir = new int[9];
-        }
-
-        public Cell copy() {
-            return new Cell(x, y, shark, smell, cnt, dir.clone());
-        }
     }
 }

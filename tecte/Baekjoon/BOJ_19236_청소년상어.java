@@ -1,5 +1,7 @@
 /*
  * 문제 : 백준 19236번 - 청소년 상어 (https://www.acmicpc.net/problem/19236)
+ *
+ * 시간 복잡도: O(3^16)
  */
 
 package Baekjoon;
@@ -9,31 +11,7 @@ import java.util.StringTokenizer;
 
 public class BOJ_19236_청소년상어 {
     // public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        int[][] sea = new int[4][4];
-        int[][] fish = new int[17][3];
-        int sum = 0;
-
-        for (int i = 0; i < 4; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-
-            for (int j = 0; j < 4; j++) {
-                int a = Integer.parseInt(st.nextToken());
-                int b = Integer.parseInt(st.nextToken());
-
-                sea[i][j] = a;
-                fish[a] = new int[]{i, j, b};
-            }
-        }
-
-        bw.write(move(sea, fish, 0, 0, sum) + "");
-        br.close();
-        bw.close();
-    }
-
-    public static int move(int[][] sea, int[][] fish, int x, int y, int sum) {
+    private static int move(int[][] sea, int[][] fish, int x, int y, int sum) {
         int[][] newSea = new int[4][4];
         int[][] newFish = new int[17][3];
 
@@ -94,5 +72,29 @@ public class BOJ_19236_청소년상어 {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int[][] sea = new int[4][4];
+        int[][] fish = new int[17][3];
+        int sum = 0;
+
+        for (int i = 0; i < 4; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+
+            for (int j = 0; j < 4; j++) {
+                int a = Integer.parseInt(st.nextToken());
+                int b = Integer.parseInt(st.nextToken());
+
+                sea[i][j] = a;
+                fish[a] = new int[]{i, j, b};
+            }
+        }
+
+        bw.write(move(sea, fish, 0, 0, sum) + "");
+        br.close();
+        bw.close();
     }
 }

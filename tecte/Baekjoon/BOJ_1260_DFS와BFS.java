@@ -1,5 +1,7 @@
 /*
- * 문제 : 백준 1260번 - DFS와 BFS (https://www.acmicpc.net/problem/1260)
+ * 문제: 백준 1260번 - DFS와 BFS (https://www.acmicpc.net/problem/1260)
+ *
+ * 시간 복잡도: O(n^2)
  */
 
 package Baekjoon;

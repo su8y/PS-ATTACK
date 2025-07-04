@@ -1,7 +1,9 @@
 /*
- * 문제 : 백준 1927번 - 최소 힙 (https://www.acmicpc.net/problem/1927)
+ * 문제: 백준 1927번 - 최소 힙 (https://www.acmicpc.net/problem/1927)
  * 문제 풀이
  *  PriorityQueue(우선순위 큐)로 품
+ *
+ * 시간 복잡도: O(n log n)
  */
 
 package Baekjoon;

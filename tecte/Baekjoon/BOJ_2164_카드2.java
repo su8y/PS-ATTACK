@@ -1,5 +1,7 @@
 /*
- * 문제 : 백준 2164번 - 카드2 (https://www.acmicpc.net/problem/2164)
+ * 문제: 백준 2164번 - 카드2 (https://www.acmicpc.net/problem/2164)
+ *
+ * 시간 복잡도: O(N)
  */
 
 package Baekjoon;

@@ -1,7 +1,9 @@
 /*
- * 문제 : 백준 25516928번 - 뱀과 사다리 게임 (https://www.acmicpc.net/problem/16928)
+ * 문제: 백준 25516928번 - 뱀과 사다리 게임 (https://www.acmicpc.net/problem/16928)
  * 문제 풀이
- *  BFS로 주사위를 굴려야 하는 최소 횟수 구함
+ *  BFS로 주사위를 굴려야 하는 최소 횟수 구함.
+ *
+ * 시간 복잡도: O(v + e) - v: 칸의 수, e: 간선의 수
  */
 
 package Baekjoon;

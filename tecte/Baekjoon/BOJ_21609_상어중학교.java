@@ -1,5 +1,7 @@
 /*
  * 문제 : 백준 21609번 - 상어 중학교 (https://www.acmicpc.net/problem/21609)
+ *
+ * 시간 복잡도: O(n^6)
  */
 
 package Baekjoon;
@@ -12,6 +14,50 @@ import java.util.StringTokenizer;
 
 public class BOJ_21609_상어중학교 {
     // public class Main {
+    public static void gravity(int[][] field) {
+        for (int i = 0; i < field.length; i++) {
+            for (int j = field.length - 2; j >= 0; j--) {
+                if (field[j][i] >= 0) {
+                    for (int k = j; k < field.length - 1; k++) {
+                        if (field[k + 1][i] == -2) {
+                            field[k + 1][i] = field[k][i];
+                            field[k][i] = -2;
+                        } else {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public static class Cell {
+        int x, y;
+
+        public Cell(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    public static class Group {
+        ArrayList<Cell> cells;
+        int color;
+        int size;
+        int rainbowBlock;
+        int row;
+        int col;
+
+        public Group(ArrayList<Cell> cells, int color, int size, int rainbowBlock, int row, int col) {
+            this.cells = cells;
+            this.color = color;
+            this.size = size;
+            this.rainbowBlock = rainbowBlock;
+            this.row = row;
+            this.col = col;
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -115,49 +161,5 @@ public class BOJ_21609_상어중학교 {
         bw.write(score + "");
         br.close();
         bw.close();
-    }
-
-    public static void gravity(int[][] field) {
-        for (int i = 0; i < field.length; i++) {
-            for (int j = field.length - 2; j >= 0; j--) {
-                if (field[j][i] >= 0) {
-                    for (int k = j; k < field.length - 1; k++) {
-                        if (field[k + 1][i] == -2) {
-                            field[k + 1][i] = field[k][i];
-                            field[k][i] = -2;
-                        } else {
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    public static class Cell {
-        int x, y;
-
-        public Cell(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
-    public static class Group {
-        ArrayList<Cell> cells;
-        int color;
-        int size;
-        int rainbowBlock;
-        int row;
-        int col;
-
-        public Group(ArrayList<Cell> cells, int color, int size, int rainbowBlock, int row, int col) {
-            this.cells = cells;
-            this.color = color;
-            this.size = size;
-            this.rainbowBlock = rainbowBlock;
-            this.row = row;
-            this.col = col;
-        }
     }
 }

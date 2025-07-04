@@ -1,5 +1,7 @@
 /*
  * 문제 : 백준 17822번 - 원판 돌리기 (https://www.acmicpc.net/problem/17822)
+ *
+ * 시간 복잡도: O( t * n * m)
  */
 
 package Baekjoon;

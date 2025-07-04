@@ -1,5 +1,7 @@
 /*
- * 문제 : 백준 14501번 - 퇴사 (https://www.acmicpc.net/problem/14501)
+ * 문제: 백준 14501번 - 퇴사 (https://www.acmicpc.net/problem/14501)
+ *
+ * 시간 복잡도: O(n)
  */
 
 package Baekjoon;

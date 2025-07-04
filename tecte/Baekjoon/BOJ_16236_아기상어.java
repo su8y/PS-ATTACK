@@ -1,5 +1,7 @@
 /*
  * 문제 : 백준 16236번 - 아기 상어 (https://www.acmicpc.net/problem/16236)
+ *
+ * 시간 복잡도: O(n^4)
  */
 
 package Baekjoon;

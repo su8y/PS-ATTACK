@@ -1,7 +1,9 @@
 /*
- * 문 제 : 백준 1987번 - 알파벳 (https://www.acmicpc.net/problem/1987)
+ * 문 제: 백준 1987번 - 알파벳 (https://www.acmicpc.net/problem/1987)
  * 문제 풀이
  *  DFS을 사용하여 다음 이동할 곳의 알파벳이 이미 지나온 길의 알파벳인지 확인하고 지나온 알파벳이 아니면 이동, 지나온 알파벳이면 다른 곳을 확인하여 이동
+ *
+ * 시간 복잡도: O(r * c)
  */
 
 package Baekjoon;

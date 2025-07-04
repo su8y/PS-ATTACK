@@ -1,5 +1,7 @@
 /*
- * 문제 : 백준 7682번 - 틱택토 (https://www.acmicpc.net/problem/7682)
+ * 문제: 백준 7682번 - 틱택토 (https://www.acmicpc.net/problem/7682)
+ *
+ * 시간 복잡도: O(t) - t: 테스트 케이스 수
  */
 
 package Baekjoon;
