@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/c++-00599C?style=for-the-badge&logo=c++&logoColor=white"/>
 
 ## 참여 방법
-[기여 가이드를 읽어주세요](./CONTRIBUTOR.md)
+[기여 가이드를 읽어주세요](./CONTRIBUTOR.md)  
 [Kakao 오픈채팅방](https://open.kakao.com/o/gZeZhE4h)
 
 ## 멤버
